@@ -42,3 +42,10 @@ This line of code copy the current directory into the container's current workin
 CMD ["python", "extraction.py"]
 ```
 This line of code is actually the `shell` command which runs our main script file which is `extraction.py`.
+
+### HOW TO RUN:
+Clone the repository into your local system. Open a terminal and use the following command to run the docker container.
+#### NOTE: MAKE SURE DOCKER IS INSTALLED AND RUNNING
+```
+$ docker run -it ocr_extraction
+```
