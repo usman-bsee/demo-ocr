@@ -1,25 +1,25 @@
 # Makefile
 
 # Variables
-DOCKER_IMAGE_NAME = my_ocr_project
-SCRIPT_NAME = extraction.py
+DOCKER_COMPOSE_FILE = /media/cactus/sda2/cactus/demo-ocr/docker-compose.yaml
+CONTAINER_NAME = ocr-extraction
 
 # Build the Docker image
 build:
-	docker build -t $(DOCKER_IMAGE_NAME) .
+	docker-compose build
 
-# Run the Docker container
-run:
-	docker run -it $(DOCKER_IMAGE_NAME)
+# Run the Docker container in detached mode
+run-detached:
+	docker-compose up
 
-# Run the Python script inside the Docker container
-script:
-	docker run -it $(DOCKER_IMAGE_NAME) python $(SCRIPT_NAME)
+# Start the Docker container and attach to its interactive shell
+shell:
+	docker-compose -f $(CONTAINER_NAME) exec ocr-extraction /bin/bash
 
 # Clean up (remove Docker image)
 clean:
-	docker rmi $(DOCKER_IMAGE_NAME)
+	docker-compose -f $(CONTAINER_NAME) down
 
 start-build:
 	@make build
-	@make run
+	@make run-detached

@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ocr-extraction:
+    container_name: ocr-extraction
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: tail -f /dev/null
