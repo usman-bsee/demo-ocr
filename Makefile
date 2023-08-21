@@ -1,4 +1,3 @@
-# Makefile
 
 # Variables
 DOCKER_COMPOSE_FILE = /media/cactus/sda2/cactus/demo-ocr/docker-compose.yaml
