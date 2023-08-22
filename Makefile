@@ -13,7 +13,7 @@ run-detached:
 
 # Start the Docker container and attach to its interactive shell
 shell:
-	docker-compose -f $(CONTAINER_NAME) exec ocr-extraction /bin/bash
+	docker-compose -f $(DOCKER_COMPOSE_FILE) exec ocr-extraction /bin/bash
 
 # Clean up (remove Docker image)
 clean:

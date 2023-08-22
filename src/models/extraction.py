@@ -1,7 +1,6 @@
 import pytesseract
 from PIL import Image
 from pdf2image import convert_from_path
-
 def extract_text_from_pdf(pdf_path):
     # Convert PDF to a list of images
     images = convert_from_path(pdf_path)
