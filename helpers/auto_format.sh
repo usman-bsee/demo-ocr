@@ -5,7 +5,7 @@
 # If possible it will run autopep8 in a Docker container, otherwise it will run it locally.
 
 # Check for uncommitted changes
-if git diff-index --quiet HEAD --; then
+if git diff-index --quiet main --; then
     # No changes
     echo "No uncommitted changes detected."
 
