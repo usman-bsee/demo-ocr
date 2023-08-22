@@ -12,6 +12,7 @@ if git diff-index --quiet main --; then
     # Function to run autopep8 on a file
     function run_autopep8 {
         echo "Processing $1"
+        echo "this is running autopep8..."
         autopep8 --in-place --aggressive --aggressive $1
     }
 
