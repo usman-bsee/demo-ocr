@@ -141,4 +141,9 @@ If you would like to attempt to automatically fix some of the PEP 8 errors you c
 Adhering to these style guidelines not only helps keep the codebase clean and consistent, but also makes it easier for others to read and understand your code. Thank you for helping maintain the quality of our code!
 
 #### ALTERNATIVELY
-You can directly run `./helpers/pep8/run_flake8.sh` to run flake8 on your code and then run `./helpers/pep8/auto_format.sh` to run autopep8 on your code.
+You can directly run the following commands to apply PEP 8 style guidelines to your code. This will run `flake8` on your code and then apply `autopep8` on your code. 
+```
+$ ./helpers/pep8/run_flake8.sh
+$ ./helpers/pep8/auto_format.sh
+
+```
