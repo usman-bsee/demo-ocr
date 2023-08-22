@@ -145,5 +145,4 @@ You can directly run the following commands to apply PEP 8 style guidelines to y
 ```
 $ ./helpers/pep8/run_flake8.sh
 $ ./helpers/pep8/auto_format.sh
-
 ```
