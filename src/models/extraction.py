@@ -20,10 +20,6 @@ def extract_text_from_pdf(pdf_path):
     return extracted_text
 
 
-
-
-
-
 if __name__ == '__main__':
     pdf_path = 'src/data/data_file.pdf'
     extracted_text = extract_text_from_pdf(pdf_path)

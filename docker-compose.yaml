@@ -6,3 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     command: tail -f /dev/null
+  format-files:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ./helpers/docker_auto_format.sh

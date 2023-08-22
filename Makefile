@@ -22,3 +22,9 @@ clean:
 start-build:
 	@make build
 	@make run-detached
+
+lint:
+	@./helpers/pep8/run_flake8.sh
+
+lint-fix:
+	@./helpers/pep8/auto_format.sh

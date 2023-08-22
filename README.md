@@ -130,3 +130,15 @@ Clone the repository into your local system. Open a terminal and use the followi
 ```
 $ make start-build
 ```
+
+
+### Linting
+Before submitting your code, please ensure it follows the PEP 8 guidelines. We utilize [flake8](http://flake8.pycqa.org/en/latest/) to check our code for PEP 8 compliance. To run it simply run `make lint`. This will run flake8 for you using our `helpers/pep8/run_flake8.sh` script. 
+
+#### Auto fix lint errors
+If you would like to attempt to automatically fix some of the PEP 8 errors you can run `make lint-fix` which will run `helpers/pep8/auto_format.sh` to run autopep8 on all of your python files efficiently; this will attempt to fix PEP8 errors but will not fix every error. Be sure to re-run `make lint` after running `make lint-fix` to check for the errors that couldn't be automatically fixed!
+
+Adhering to these style guidelines not only helps keep the codebase clean and consistent, but also makes it easier for others to read and understand your code. Thank you for helping maintain the quality of our code!
+
+#### ALTERNATIVELY
+You can directly run `./helpers/pep8/run_flake8.sh` to run flake8 on your code and then run `./helpers/pep8/auto_format.sh` to run autopep8 on your code.
